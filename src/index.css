@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+
+* {
+    font-family: 'Pretendard', sans-serif;
+}
+
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+.animate-slowZoom {
+    animation: slowZoom 12s ease-in-out forwards;
+}
+
+
+/* ===== 기본 스타일 ===== */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff !important;
+    fill: #fff !important;
+    stroke: #fff !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(6px);
+    padding: 10px;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+}
+
+/* ===== Hover 효과 ===== */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    transform: scale(1.08);
+}
+
+/* ===== active 클릭 효과 ===== */
+.swiper-button-prev:active,
+.swiper-button-next:active {
+    transform: scale(0.94);
+}
+
+/* 비활성 dot 색상 */
+.swiper-pagination-bullet {
+    background: #999 !important; /* 연한 검정 (default) */
+    opacity: 1 !important;       /* 완전 불투명하게 */
+}
+
+/* 활성 dot 색상 */
+.swiper-pagination-bullet-active {
+    background: #000 !important; /* 진한 검정 */
+}
+
+/* ===== 반응형 크기 조절 ===== */
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        font-size: 13px !important;
+    }
+}
